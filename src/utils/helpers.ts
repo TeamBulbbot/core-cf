@@ -10,7 +10,7 @@ export function hexToDecimal(hex: string): number {
 }
 
 export function formatHash(hash: string): string {
-	return hash.substring(0, 6);
+	return hash.substring(0, 7);
 }
 
 export function whoToPing(username: DeveloperGitHubName): string {
@@ -20,5 +20,7 @@ export function whoToPing(username: DeveloperGitHubName): string {
 		KlukCZ: "439396770695479297",
 	};
 
-	return DEVELOPERS[username];
+	const developer = DEVELOPERS[username];
+
+	return developer ? developer : "N/A";
 }

@@ -1,6 +1,6 @@
 import { Embed, ComponentButton, Message } from "../../types/Messages";
 
-export async function sendUpdateMessage(content: string, embeds: Embed[] | undefined, components: ComponentButton[]): Promise<Response> {
+export async function sendUpdateMessage(content: string | undefined, embeds: Embed[] | undefined, components: ComponentButton[]): Promise<Response> {
 	try {
 		const r = await fetch(`https://discord.com/api/v10/channels/${DEPLOY_CHANNEL_ID}/messages`, {
 			method: "POST",
